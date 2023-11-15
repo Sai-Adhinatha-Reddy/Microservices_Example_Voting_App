@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: voting-ingress
+  namespace: voting-proj
+  labels:
+    app: voting-ingress
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /vote
+            backend:
+              serviceName: vote
+              servicePort: 80
+		  - path: /result
+            backend:
+              serviceName: result
+              servicePort: 80
