@@ -4,13 +4,12 @@ metadata:
   labels:
     app: vote
   name: vote
-  namespace: voting-proj
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: "ip"
     service.beta.kubernetes.io/aws-load-balancer-type: external
     service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
   - name: "vote-service"
     port: 80
