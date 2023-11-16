@@ -5,14 +5,13 @@ metadata:
   namespace: ingress-nginx
   labels:
     app: result-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
-  - http:
+  - host: "result.kiddypi.com"
+    http:
       paths:
-      - path: /result
+      - path: /
         pathType: Prefix
         backend:
           service:

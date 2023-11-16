@@ -5,12 +5,11 @@ metadata:
   namespace: ingress-nginx
   labels:
     app: voting-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
-  - http:
+  - host: "vote.kiddypi.com"
+    http:
       paths:
       - path: /
         pathType: Prefix

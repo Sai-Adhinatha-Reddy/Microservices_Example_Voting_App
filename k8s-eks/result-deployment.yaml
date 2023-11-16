@@ -16,7 +16,7 @@ spec:
         app: result
     spec:
       containers:
-      - image: ckr123/result-app:k8s
+      - image: ckr123/result-app:latest
         name: result
         ports:
         - containerPort: 80
