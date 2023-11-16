@@ -4,7 +4,7 @@ metadata:
   labels:
     app: db
   name: db
-  namespace: voting-proj
+  namespace: ingress-nginx
 spec:
   type: ClusterIP
   ports:

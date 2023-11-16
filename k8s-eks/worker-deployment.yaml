@@ -4,7 +4,7 @@ metadata:
   labels:
     app: worker
   name: worker
-  namespace: voting-proj
+  namespace: ingress-nginx
 spec:
   replicas: 1
   selector:

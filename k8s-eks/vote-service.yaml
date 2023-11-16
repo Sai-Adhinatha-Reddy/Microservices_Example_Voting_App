@@ -4,10 +4,7 @@ metadata:
   labels:
     app: vote
   name: vote
-  annotations:
-    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: "ip"
-    service.beta.kubernetes.io/aws-load-balancer-type: external
-    service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
+  namespace: ingress-nginx
 spec:
   type: ClusterIP
   ports:
