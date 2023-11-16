@@ -16,7 +16,7 @@ spec:
         app: result
     spec:
       containers:
-      - image: dockersamples/examplevotingapp_result
+      - image: ckr123/result-app:k8s
         name: result
         ports:
         - containerPort: 80
