@@ -15,7 +15,7 @@ spec:
         app: vote
     spec:
       containers:
-      - image: ckr123/voting-app:latest
+      - image: gsaiadhinathareddy/voting-app:vote
         name: vote
         ports:
         - containerPort: 80
